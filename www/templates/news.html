@@ -1,0 +1,33 @@
+<ion-view view-title="News">
+    <ion-nav-buttons side="right">
+    <button class="right button button-icon icon ion-plus" ng-show="checkmosque()" ng-click="addEvent()"></button>
+    </ion-nav-buttons>
+  <ion-content>
+              <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+      
+    <ion-list>
+     
+
+
+<div ng-repeat="(key,news) in data" class="list card">
+  <div class="item">
+    <p>{{news.date}}</p>
+  </div>
+
+  <div class="item item-body">
+      <strong>{{news.name}}</strong><p>by {{news.author}}</p>
+      <h2>{{news.details}}</h2>
+</div>
+    <button class="button button-outline button-positive" ng-show="checkmosque()" ng-click="deleteEvent(key)">Delete</button>
+</div>
+ 
+          
+          
+          
+    
+    </ion-list>
+  </ion-content>
+</ion-view>

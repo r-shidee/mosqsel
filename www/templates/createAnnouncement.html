@@ -1,0 +1,31 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Create new announcement</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+        <ion-content>
+        <div class="list list-inset">
+        
+        <label class="item item-input">
+        <span class="input-label">Title</span>
+        <input ng-model="eventName" type="text"/>
+        </label>
+            
+        <label class="item item-input">
+        <span class="input-label">Details</span>
+        <input ng-model="eventDetails" type="text"/>
+        </label>
+        
+        <label class="item item-input">
+        <span class="input-label">Author</span>
+        <input ng-model="eventAuthor" type="text"/>
+        </label>
+       
+            
+        </div>
+        <button ng-click="add(eventName, eventDetails, eventAuthor)" class="button button-block button-stable">Create</button>
+<button ng-click="closeLogin()" class="button button-block button-calm">Cancel</button>
+    </ion-content>    
+</ion-modal-view>

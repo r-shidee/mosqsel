@@ -1,0 +1,39 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Create new event</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+        <ion-content>
+        <div class="list list-inset">
+        
+        <label class="item item-input">
+        <span class="input-label">Name</span>
+        <input ng-model="eventName" type="text"/>
+        </label>
+            
+        <label class="item item-input">
+        <span class="input-label">Details</span>
+        <input ng-model="eventDetails" type="text"/>
+        </label>
+        
+        <label class="item item-input">
+        <span class="input-label">Location</span>
+        <input ng-model="eventLocation" type="text"/>
+        </label>
+        
+        <label class="item item-input">
+        <span class="input-label">Date</span>
+        <input ng-model="eventDate" type="date" placeholder="Event Date">
+        </label>    
+            
+        <label class="item item-input">
+        <span class="input-label">Time</span>
+        <input ng-model="eventTime" type="time" placeholder="Event Start Time" />
+        </label>
+            
+        </div>
+        <button ng-click="add(eventName, eventDetails, eventLocation, eventDate, eventTime)" class="button button-block button-stable">Create</button>
+    </ion-content>    
+</ion-modal-view>

@@ -1,0 +1,29 @@
+<ion-view title="Sign In">
+<ion-header-bar align-title="left" class="bar-positive">
+
+  <h1 class="title">MosqSel</h1>
+  
+</ion-header-bar>
+    <ion-content>
+        <div>
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <input ng-model="username" type="email" placeholder="Email" />
+                </label>
+                <label class="item item-input">
+                    <input ng-model="password" type="password" placeholder="Password" />
+                </label>
+            </div>
+                <button ng-click="dologin(username, password)" class="button button-block button-stable">Sign In</button>
+                <button ng-click="register(username, password)" class="button button-block button-dark">Sign Up</button>
+
+            <button ng-click="resetpassword(username) "class="button button-clear button-assertive">
+  Forgot your password?
+</button>
+        </div>
+        
+        
+    </ion-content>
+    
+    
+</ion-view>
